@@ -25,5 +25,5 @@ Throughout the course you'll be working with new people and learning about how y
 ## Examples
 
 - [Nich](https://github.com/nichgalzin)'s [user manual](https://github.com/fac28/user-manuals/issues/9)
-- [Alex]()'s [user manual]()
+- [Alex](https://github.com/AlexVOiceover)'s [user manual](https://github.com/fac29/user-manuals/issues/7)
 - [Jason](https://github.com/JasonWarrenUK)'s [user manual](https://github.com/fac30/User-Manuals/issues/14)
