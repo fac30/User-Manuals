@@ -25,6 +25,7 @@ Create a user manual template for each cohort member
   - [ ] `commit`
 2. You must never commit to main
 3. You must get your Pull Request reviewed by another team member
+4. All edits must be made in your IDE, not directly in GitHub
 
 ---
 
