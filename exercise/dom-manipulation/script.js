@@ -1,5 +1,3 @@
-// script.js
-
 // Toggle hidden information
 const toggleButton = document.getElementById('btn-toggle1');
 const hiddenInfo = document.querySelector('.hidden-info');
