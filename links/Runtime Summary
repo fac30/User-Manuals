@@ -1,0 +1,101 @@
+# nodeJS
+
+**What is it?**
+It's an open source runtime environment
+The runtime operates outside of a browser context - omits browser specific javascript Api's but supports more traditional OS Api's.
+Async I/O to help prevent blocking. 
+
+**What does it allow you to do?**
+Allows you to use javascript on the backend as well as the frontend. The alternative would be a second language - More complex. 
+Allows you to use Npm library - Useful bits of reuseable code that make life easier rather than writing them from scratch.
+
+**Links & Resources**
+https://nodejs.org/en/learn/getting-started/introduction-to-nodejs
+https://www.freecodecamp.org/news/what-is-node-js/
+http://debuggable.com/posts/understanding-node-js:4bd98440-45e4-4a9a-8ef7-0f7ecbdd56cb
+
+
+
+# NPM
+
+**What is a node package manager?**
+
+A Node Package Manager (NPM) is a tool used to manage JavaScript packages (also called modules or libraries) in Node.js projects. It is a online repository for the publishing of open-source Node.js projects.
+
+
+
+text & imagery reference :
+https://www.geeksforgeeks.org/node-js-npm-node-package-manager/
+https://careerfoundry.com/en/blog/web-development/what-is-npm/#what-is-npm
+
+**What is a dependency?**
+
+
+In the npm (Node Package Manager) context, a dependency is a package that your project needs to function properly. These dependencies are typically installed from the npm registry and are listed in the package.json file.
+
+Types of dependencies:
+
+* Regular Dependencies (dependencies) – Required for the app to run.
+* Development Dependencies (devDependencies) – Needed only for development (e.g., testing, linting).
+* Peer Dependencies – Used when a package expects the user to install a dependency manually (common in plugins).
+* Optional Dependencies – Not required, but used if available.
+
+text & imagery reference :
+https://dev.to/tijan_io/understanding-dependencies-and-dev-dependencies-beginners-guide-248h
+
+# Typescript
+What is TS? A programming language on top of JS that is strongly typed. That is, each variable has a type that is known in compilation time, thus is enforces some of the pre requisite semantics that are often implicit in JS. For Example:
+
+First, every variable has a type in runtime, even if we don't think about it explictly.
+
+const x = 5; //type of x = number.
+const y = 2;
+
+function add(x, y){
+return x + y;
+}
+
+Implicit semantics: addition of two numbers (number is a distinct type, as opposed to string, object, boolean, etc).
+
+const x = 'Cat';
+const y = 2;
+
+function add(x, y){
+return x + y;
+}
+
+console.log(add(x, y)) // => outputs 'Cat2' rather than a number.
+
+Beneath the hood, JS coerces y to a string and then concatenates the two strings. so it is really concatenation and not addition.
+
+There are many occasions in which the behavior of JS changes in run-time according to the actual types of the variables, and implicit type coercion happens. And very often, we are not sure what is the desired behaviour.
+
+For example,
+Equality Table
+
+The need arose for strongly typed language as part of the development process, that helps us to write in JS safely. TS is compiled into JS, which can then be run anywhere JS is run.
+
+let y: number = 2;
+let x: number = 'Cat'; // => causes error message(below)
+
+// Type 'string' is not assignable to type 'number'.
+
+function add(x: number, y: number): number {
+return x + y;
+}
+
+console.log(add('Cat', 7)); // => causes error message (below)
+
+// Argument of type 'string' is not assignable to parameter of type 'number'.
+
+How to start using TS?
+–npm module
+–Nuget Package
+
+VS extension
+Bottom Line: It forces us to think about types and the semantics of types (in functions, classes, etc) which are glossed over in JS
+
+Feature	JavaScript (TS)	TypeScript (JS)
+Typing	Dynamic	Optional Static Typing
+Compilation	Interpreted	Compiled to JS
+Error Checking	Runtime	Compile Time
