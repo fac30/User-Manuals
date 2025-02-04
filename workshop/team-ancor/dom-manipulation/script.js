@@ -6,19 +6,44 @@ toggleButton.addEventListener('click', () => {
     hiddenInfo.classList.toggle('hidden-info');
 });
 
-// Change background color of the box
+//interactive spinning button
 const colorButton = document.getElementById('btn-change-color');
-const colorBox = document.getElementById('color-box');
 
-colorButton.addEventListener('click', () => {
-    const colors = ['#FF5733', '#33FF57', '#3357FF', '#F3FF33'];
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    colorBox.style.backgroundColor = randomColor;
+colorButton.addEventListener('click', function() {
+    colorButton.style.animation = "spin 0.5s";
+setTimeout(() => {
+    colorButton.style.animation = "";
+}, 500);
 });
 
+//button text size
+if (colorButton) {
+    colorButton.style.fontSize = "24px";
+}
+
+const styleSheet = document.createElement("style");
+styleSheet.textContent = `
+   @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+`;
+document.head.appendChild(styleSheet);
+
+//text change to button via id 
+document.getElementById('btn-change-color').textContent = "Click for inspiration!";
+
+//hiding the existing color box
+const colorBox = document.getElementById('color-box');
+if (colorBox) {
+    colorBox.style.display = "none"; 
+}
+        
 // Form submission handling
 const form = document.getElementById('feedback-form');
+
 const formResponse = document.getElementById('form-response');
+
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -26,7 +51,29 @@ form.addEventListener('submit', (event) => {
     const feedback = document.getElementById('feedback').value;
     formResponse.textContent = `Thank you, ${name}, for your feedback: "${feedback}"`;
     form.reset();
+
+    // Zen quote image
+    const section3 = document.getElementById("section3");
+
+    // Delete any image we had before
+    let image = section3.querySelector("img");
+    if (image)
+        image.remove();
+
+    // create a new one
+    image = document.createElement("img");
+    image.setAttribute("href", "https://zenquotes.io/api/image");
+    section3.appendChild(image);
 });
+
+
+//Form 
+/* Anna V - I believe these few lines need to go above formResponse (line45). 
+ Let me know if that works for you/ feel free to add */ 
+if (name) {
+    const section1heading = document.querySelector("#section1 h2")
+    section1heading.textContent = 'Welcome, $nameInput'
+}
 
 
 /* PROMPTS FOR ADDITIONAL INTERACTIONS
@@ -42,4 +89,14 @@ Issue 1. Add functionality to highlight the navigation link of the current secti
 9. Add a countdown timer to a section, resetting after it reaches zero.
 10. Fetch and display data from a public API (e.g., random jokes or quotes).
 
+
+Theme idea: 
+Name: ChampionYourself
+Description: For when you need inspiration and your teammates aren't around
+We could create a website that gives us motivation as we're studying/ coding
+
+We can use the api to generate a random inspirational image: https://zenquotes.io/api/image
+
+Zen Quotes API: https://zenquotes.io/
+Instant Words of Inspiration
 */
