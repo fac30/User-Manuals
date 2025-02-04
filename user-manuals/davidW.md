@@ -8,11 +8,16 @@ assignees: ''
 ---
 
 # Name
+David
+
 ## Pronouns
+he/him is fine, and actually I don't mind anythiing else either :)
 
 ### How I get my best work done:
 
+
 ### The role I usually take in a team:
+
 
 ### My communication style:
 
