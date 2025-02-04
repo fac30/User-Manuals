@@ -28,9 +28,10 @@ form.addEventListener('submit', (event) => {
     form.reset();
 });
 
+
 /* PROMPTS FOR ADDITIONAL INTERACTIONS
 
-1. Add functionality to highlight the navigation link of the current section as the user scrolls.
+Issue 1. Add functionality to highlight the navigation link of the current section as the user scrolls.
 2. Implement a light/dark mode toggle using CSS root variables.
 3. Create a dynamic list where users can add and remove items.
 4. Add validation to the feedback form to ensure name and feedback are not empty.
