@@ -1,0 +1,20 @@
+{
+  "name": "fac-31",
+  "version": "1.0.0",
+  "description": "Information coming soon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fac-31/fac-31.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fac-31/fac-31/issues"
+  },
+  "homepage": "https://github.com/fac-31/fac-31#readme"
+}
